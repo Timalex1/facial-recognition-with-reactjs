@@ -47,13 +47,14 @@ class App extends Component {
         return {
             leftCol: clarifaiFace.left_col * width,
             topRow: clarifaiFace.top_row * height,
-            rightColumn: height - (clarifaiFace.right_col * width),
+            rightCol: height - (clarifaiFace.right_col * width),
             bottomRow: height - (clarifaiFace.bottom_row * height)
         }
 
     }
 
     displayFaceBox = (box) => {
+        console.log(box);
         this.setState({ box: box });
     }
 
@@ -82,7 +83,7 @@ class App extends Component {
                 <Logo />
                 <Rank />
                 <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
-                <FaceRecognition imageUrl={this.state.imageUrl} />
+                <FaceRecognition imageUrl={this.state.imageUrl} box={this.state.box} />
             </div>
         );
     }
