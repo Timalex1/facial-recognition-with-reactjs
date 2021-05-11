@@ -4,11 +4,11 @@ const Rank = () => {
     return (
         <div>
             <div className='white f3'>
-                {'Andrei, your current rank is....'}
+                {'Hey User, your current rank is....'}
             </div>
 
             <div className='white f1'>
-                {'#5'}
+                {`#${Math.floor(Math.random() * 10)}`}
             </div>
         </div>
     )
